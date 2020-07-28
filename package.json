@@ -1,0 +1,14 @@
+{
+  "name": "repro-10s-delay-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "lambda-warmer": "^1.2.1",
+    "mongoose": "^5.9.25"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
+}
