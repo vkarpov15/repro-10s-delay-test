@@ -2,8 +2,7 @@ const mongoose = require('mongoose'),
       { setupInitialCountryList } = require('./countryUtils'),
       { logd, logi } = require('./debuglog');
 
-// TODO: add MongoDB URI
-const DATABASEURL = '';
+const cloud = require('mongoose-cloud');
 
 let conn = null;
 
@@ -41,7 +40,7 @@ const connectToDatabase = () => {
 
   logi('connectToDatabase> CREATING a new database connection.');
   conn = mongoose.connection;
-  return mongoose.connect(DATABASEURL, options).then((db) => {
+  return mongoose.connect(cloud.config().uri, { ...cloud.config(), ...options }).then((db) => {
     logd(`connectToDatabase> MongoDB - isConnected: ${db.connections[0].readyState}`);
     return setupInitialStates();
   });

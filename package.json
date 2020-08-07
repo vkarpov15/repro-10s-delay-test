@@ -5,7 +5,8 @@
   "main": "handler.js",
   "dependencies": {
     "lambda-warmer": "^1.2.1",
-    "mongoose": "^5.9.25"
+    "mongoose": "^5.9.25",
+    "mongoose-cloud": "*"
   },
   "devDependencies": {},
   "scripts": {},
